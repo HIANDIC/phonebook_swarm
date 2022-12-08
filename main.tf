@@ -259,7 +259,7 @@ resource "aws_iam_role" "ec2fulltoecr" {
   managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"]
 }
 
-# rolü baglamak icin iam_instance_profile a ihtiyacimiz var. Bu olmadan rolü atayamayiz
+# We need iam_instance_profile to mount the role. Without this we cannot assign the role
 resource "aws_iam_instance_profile" "ec2ecr-profile" {
   name = "swarmprofileproje204"
   role = aws_iam_role.ec2fulltoecr.name
