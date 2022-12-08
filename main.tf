@@ -23,7 +23,7 @@ data "aws_region" "current" {
 
 locals {
   github-repo = "https://github.com/HIANDIC/phonebook_swarm.git"
-  github-file-url = "https://raw.githubusercontent.com/HIANDIC/phonebook_swarm/main/"
+  github-file-url = "https://raw.githubusercontent.com/HIANDIC/phonebook_swarm/master/"
 }
 
 data "template_file" "leader-master" {
